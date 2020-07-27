@@ -1,1 +1,28 @@
-<p>productos works!</p>
+<nb-layout>
+
+    <nb-layout-column>
+        <nb-card class="list-card">
+            <nb-card-header>Categorías</nb-card-header>
+            <nb-card-body>
+              <nb-list>
+                <nb-list-item *ngFor="let category of categories">
+                  {{ category.name }}
+                </nb-list-item>
+              </nb-list>
+            </nb-card-body>
+        </nb-card>
+    </nb-layout-column>
+      
+    <nb-layout-column>
+          <nb-card class="list-card" size="small">
+            <nb-card-header>Productos</nb-card-header>
+            <nb-list>
+                <nb-list-item *ngFor="let product of products">
+                    {{ product.name }}
+                </nb-list-item>
+            </nb-list>
+          </nb-card>
+    </nb-layout-column>
+
+</nb-layout>
+          
