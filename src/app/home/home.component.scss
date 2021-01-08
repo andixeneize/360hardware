@@ -1,0 +1,124 @@
+// TOOLBAR STYLES
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    width: calc(#{nb-theme(sidebar-width)} - #{nb-theme(header-padding)});
+  }
+
+.header-container {
+  display: flex;
+  align-items: center;
+  width: auto;
+
+  .logo {
+    padding: 0 1.25rem;
+    font-size: 1.75rem;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  .action {
+      padding: 0 0.5rem;
+      font-size: 1rem;
+      white-space: nowrap;
+      text-decoration: none;
+      font-weight: 400;
+    }
+}
+
+nb-action {
+  height: auto;
+  display: flex;
+  align-content: center;
+}
+
+.custom-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+// GRID STYLES
+
+.content {
+  padding: 16px;
+}
+
+.content > mat-card {
+  width: 200px;
+  background-color: #222b45;
+  border: 0.0625rem solid #101426;
+  border-radius: 0.25rem;
+  box-shadow: none;
+  color: #ffffff;
+  font-family: Open Sans, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  margin-bottom: 16px;
+}
+
+// TODO: Revisar cuales son necesarios!!
+mat-card {
+  background-color: #222b45;
+  border: 0.0625rem solid #101426;
+  border-radius: 0.25rem;
+  box-shadow: none;
+  color: #ffffff;
+  font-family: Open Sans, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  margin-bottom: 16px;
+}
+
+
+// NAV STYLES
+.products-nav {
+  width: 300px;
+  height: fit-content;
+}
+
+mat-grid-tile {
+  //background: lightblue;
+}
+
+.image-container {
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  background-size: 70%;
+  display: block;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: 2px solid #8d8d8d;
+  color: #ffffff !important;
+}
+
+.nav-button {
+  font-size: 0.75rem;
+  padding: .25rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+.nb-card {
+  background-color: #222b45;
+  border: 0.0625rem solid #101426;
+  border-radius: 0.25rem;
+  box-shadow: none;
+  color: #ffffff;
+  font-family: Open Sans, sans-serif;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  margin-bottom: 1.875rem;
+  scrollbar-face-color: #101426;
+  scrollbar-track-color: #192038;
+}
+
+.colorize-pink {
+  filter: brightness(0.5) sepia(1) hue-rotate(-70deg) saturate(5);
+}

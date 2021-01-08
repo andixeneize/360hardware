@@ -1,28 +1,41 @@
 <nb-layout>
 
-    <nb-layout-column>
-        <nb-card class="list-card">
-            <nb-card-header>Categorías</nb-card-header>
-            <nb-card-body>
-              <nb-list>
-                <nb-list-item *ngFor="let category of categories">
-                  {{ category.name }}
-                </nb-list-item>
-              </nb-list>
-            </nb-card-body>
-        </nb-card>
-    </nb-layout-column>
-      
-    <nb-layout-column>
-          <nb-card class="list-card" size="small">
-            <nb-card-header>Productos</nb-card-header>
-            <nb-list>
-                <nb-list-item *ngFor="let product of products">
-                    {{ product.name }}
-                </nb-list-item>
-            </nb-list>
-          </nb-card>
-    </nb-layout-column>
+  <!--CATEGORIES LIST-->
+  <div class="lists row">
+    <div class="col-md-12 col-lg-3 col-xxxl-3">
+      <nb-card size="medium">
+        <nb-card-header>Categorías</nb-card-header>
+          <nb-list>
+            <nb-list-item *ngFor="let category of categories">
+              {{ category.name }}
+            </nb-list-item>
+          </nb-list>
+      </nb-card>
+    </div>
+  
+    <div class="col-md-12 col-lg-9 col-xxxl-9">
+      <!--PRODUCTS LIST-->
+      <nb-card class="list-card" size="small">
+        <nb-card-header>Productos</nb-card-header>
+        <nb-list>
+          <nb-list-item *ngFor="let product of products">
+            {{ product.name }}  {{ product.id }}
+          </nb-list-item>
+        </nb-list>
+      </nb-card>
 
+      <!--PRODUCTS CARD-->
+      <nb-card>
+        <nb-card-header>Nebula</nb-card-header>
+        <nb-card-body>
+          A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.
+          Originally, nebula was a name for any diffuse astronomical object,
+          including galaxies beyond the Milky Way.
+        </nb-card-body>
+        <nb-card-footer>By Wikipedia</nb-card-footer>
+      </nb-card>
+    </div>
+  </div>
+      
 </nb-layout>
           

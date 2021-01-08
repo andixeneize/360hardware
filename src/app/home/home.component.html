@@ -1,14 +1,91 @@
-<nb-layout center>
-    <nb-layout-header>Awesome Company</nb-layout-header>
-  
-    <nb-layout-column>
-      Hello World!
-  
-      <nav>
-        <a routerLink="/productos">Productos</a>
-      </nav>
-  
-    </nb-layout-column>
-  
-    <nb-layout-footer>Contact us</nb-layout-footer>
-  </nb-layout>
+<nb-layout>
+  <nb-layout-header fixed>
+    <div class=custom-header>
+    <div class="header-container">
+      <div class="logo-container">
+        <a class="logo" href="#">360 Hardware & Software</a>
+      </div>
+    </div>
+    <div class="header-container">
+      <nb-actions>
+          <nb-action icon="search-outline"></nb-action>
+          <nb-action>
+              <nb-icon icon="monitor-outline"> </nb-icon> <a class="action" href="#">Productos</a>
+          </nb-action>
+          <nb-action>
+              <nb-icon icon="person-outline"> </nb-icon> <a class="action" href="#">Contacto</a>
+          </nb-action>
+      </nb-actions>
+    </div>
+  </div>
+  </nb-layout-header>
+
+
+  <nb-layout-column>
+    <div class="row">
+      <!--CATEGORIES LIST-->
+      <div class="products-nav card nb-card">
+    
+        <mat-grid-list cols="3" rowHeight="3:4">
+          <div *ngFor="let category of categories">
+            <mat-grid-tile>
+              <a class="nav-button">
+                <div class="image-container" style="background-image: url(https://www.logg.com.ar/static/iconos_armatupc/2_qJLcCsD.svg);">
+                </div>
+                <label>
+                  {{category.name}}
+                </label>
+              </a>
+            </mat-grid-tile>
+          </div>
+        </mat-grid-list>
+        
+      </div>
+
+      <!--PRODUCTS LIST-->
+      <div class="col">
+        
+        <div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+          <div fxFlex="20%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let product of products">
+
+            <!-- PRODUCT CARD-->
+            <mat-card class="mat-elevation-z4">
+              <img mat-card-image src="../../assets/ryzen5.jpg">
+              <mat-card-content>
+                <p>
+                  {{ product.desc }}
+                </p>
+                <p>
+                  {{ product.price | currency }}
+                </p>
+              </mat-card-content>
+            </mat-card>
+        
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+    <!--PRODUCTS CARD--
+    <nb-card size="small">
+        <nb-card-header>
+            AMD MICRO RYZEN 5 3600 4.2GHz TURBO AM4
+        </nb-card-header>
+        <nb-card-body>
+          <img src="../../assets/ryzen5.jpg" width="200" height="200">
+        </nb-card-body>
+        <nb-card-footer>$21.990</nb-card-footer>
+      </nb-card>
+  </div>
+  -->
+
+
+
+  <!---->
+    </div>
+
+  </nb-layout-column>
+</nb-layout>
